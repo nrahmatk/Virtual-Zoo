@@ -38,10 +38,13 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           
         </div>
-        <div class="modal-body mt-5">
+        <div class="modal-body mt-2">
           <div class="row justify-content-center" id="favorites-list">
             <!-- Favorite Animals will be displayed here -->
           </div>  
+          <div class="d-grid gap-2 col-6 mx-auto mb-2">
+            <button type="button" class="btn btn-success shadow float-end" data-bs-toggle="modal" data-bs-target="#HasilAkhir" onclick="AddPictureInFinal()">Hasil Akhir</button>
+          </div>
         </div>
       </div>
     </div>
@@ -95,6 +98,24 @@
             <p class="modal-description"></p>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal buat tujukin hasil akhir -->
+<div class="modal fade" id="HasilAkhir" tabindex="-1" aria-labelledby="HasilAkhirLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content" >
+      <div class="modal-body" id="finals" style="height: 800px; width: 1200px;">
+        <div class="position-relative">
+        <div class="gambar-container" id="GambarFinal" >
+         
+        <!-- Disini dimasukin gambar backgorund dan isi -->
+        <!-- <image src="checkouttes_fhddddd.png" style="max-width: 100%; max-height: 100%"></image>  -->
+
+        </div>
+      </div>
       </div>
     </div>
   </div>

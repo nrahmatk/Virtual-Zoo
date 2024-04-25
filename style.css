@@ -11,3 +11,60 @@
     height: 20vw;
     object-fit: scale-down;
 }
+
+.image-container {
+    width: 100%; /* Set the width of the container */
+    text-align: center; /* Center-align content within the container */
+}
+
+.gambar-atas {
+    position: absolute; /* Menggunakan posisi absolut untuk mengatur posisi */
+    top: 000;
+    left: 100;
+    z-index: 1
+}
+
+#finals {
+    background-image: url("checkouttes_fhddddd.png");
+    background-size: 100% 100%;
+    width: auto;
+    height: 15vw;
+    object-fit: scale-down;
+}
+
+.kompilasi {
+    width: 350px;
+    /* height: 15vw; */
+    object-fit: scale-down;
+}
+
+.bottomLeftImage {
+    position: absolute;
+    bottom: -720px;
+    left: 0
+}
+
+.bottomRightImage {
+    position: absolute;
+    bottom: -720px;
+    right: 0
+}
+
+.Middlemage {
+    position: absolute;
+    bottom: -503px;
+    right: 400px
+}
+
+.NamaPapan {
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    position: absolute;
+    bottom: -0; 
+    right: 0;
+    /* color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: "Archivo Black"; */
+}
