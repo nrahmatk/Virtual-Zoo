@@ -14,12 +14,13 @@
   
   <nav class="navbar sticky-top shadow bg-success text-bg-success">
     <div class="container-fluid">
-      <span class="navbar-brand text-white">ZOO</span>
+      <span class="navbar-brand text-white ms-3">ZOO</span>
       <div class="float-end py-2">
         <span id="like-count" class="me-3">Likes: 0/5</span>
         <!-- <div id="like-count" class="text-light">Likes: 0/5</div> -->
-        <button type="button" class="btn btn-warning mx-2" data-bs-toggle="modal" data-bs-target="#favoritesModal" >Favorit</button>
-        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#addAnimalModal" >Tambah Data</button>
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#favoritesModal" >Favorit</button>
+        <button type="button" class="btn btn-warning mx-1" data-bs-toggle="modal" data-bs-target="#addAnimalModal" >Tambah Data</button>
+        <button type="button" class="btn btn-warning" onclick="resetData()">Exit</button>
       </div>
     </div>
   </nav>
@@ -38,7 +39,6 @@
           
         </div>
         <div class="modal-body mt-5">
-          
           <div class="row justify-content-center" id="favorites-list">
             <!-- Favorite Animals will be displayed here -->
           </div>  
@@ -75,6 +75,31 @@
     </div>
   </div>
 </div>
+
+<!-- Modal animal info -->
+<div class="modal fade" id="animalModal" tabindex="-1" role="dialog" aria-labelledby="animalModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="animalModalLabel">Informasi Hewan</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+          <img src="" class="modal-img img-fluid my-5" alt="">
+          </div>
+          <div class="col mt-4">
+            <h2 class="modal-name"></h2>
+            <p class="modal-description"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

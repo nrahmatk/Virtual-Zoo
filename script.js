@@ -23,7 +23,7 @@ function renderGallery() {
     const card = `
       <div class="col-md-4 mb-3">
         <div class="card shadow p-3 mb-5 border border-success border-3 rounded">
-          <img src="${animal.image}" class="card-img-top" style="max-height: 300px;" alt="${animal.name}">
+          <img src="${animal.image}" class="card-img-top" style="max-height: 300px;" alt="${animal.name}" onclick="showAnimalModal(${index})">
           <div class="card-body">
             <h5 class="card-title text-center">${animal.name}</h5>
             <!-- <p class="card-text">${animal.description}</p> -->
@@ -36,6 +36,22 @@ function renderGallery() {
   });
   updateLikeCount();
 } 
+
+function showAnimalModal(index) {
+  const animal = animals[index];
+  const modal = document.getElementById("animalModal");
+  const modalImg = modal.querySelector(".modal-img");
+  const modalName = modal.querySelector(".modal-name");
+  const modalDescription = modal.querySelector(".modal-description");
+
+  modalImg.src = animal.image;
+  modalName.textContent = animal.name;
+  modalDescription.textContent = animal.description;
+
+  // Show the modal
+  const modalInstance = new bootstrap.Modal(modal);
+  modalInstance.show();
+}
 
 // Function to update like count in navbar
 function updateLikeCount() {
@@ -129,9 +145,6 @@ document.getElementById("addAnimalForm").addEventListener("submit", function(eve
   renderGallery();
 });
 
-
-
-// Function to initialize the application
 // Function to initialize the application
 function init() {
   // Load animals from local storage, or use an empty array if none exists
@@ -150,5 +163,10 @@ function init() {
   updateLikeCount();
 }
 
+function resetData () {
+  localStorage.clear()
+  window.location = "home.html"
+}
 
 init(); // Call init() to start the application
+
