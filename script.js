@@ -1,3 +1,28 @@
+// !--------------------login
+document.addEventListener('DOMContentLoaded', function () {
+  const inputNama = document.getElementById('nama');
+  const nextButton = document.querySelector('.next-button');
+
+  inputNama.addEventListener('input', function () {
+      // Dapat menambahkan logika tambahan jika diperlukan
+  });
+
+  nextButton.addEventListener('click', function (event) {
+      event.preventDefault()
+      const namaValue = inputNama.value.trim()
+
+      if (namaValue.length === 0) {
+          alert('Nama tidak boleh kosong!')
+      } else if (namaValue.length <= 6) {
+          navigateToNextPage()
+      } 
+  })
+
+  function navigateToNextPage() {
+      window.location.href = 'index.html'
+  }
+})
+
 // Data array of animals
 let animals = [
   { name: "Kucing", image: "https://static.vecteezy.com/system/resources/previews/013/078/569/non_2x/illustration-of-cute-colored-cat-cartoon-cat-image-in-format-suitable-for-children-s-book-design-elements-introduction-of-cats-to-children-books-or-posters-about-animal-free-png.png", description: "A domestic animal known for its independence." },
@@ -197,3 +222,34 @@ function resetData () {
 
 init(); // Call init() to start the application
 
+// Function to save canvas as JPEG
+function saveAsJPEG() {
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+  const gambarContainer = document.getElementById("GambarFinal");
+  const gambarElements = gambarContainer.getElementsByTagName("img");
+
+  // Set canvas dimensions to match container
+  canvas.width = gambarContainer.offsetWidth;
+  canvas.height = gambarContainer.offsetHeight;
+
+  // Draw images onto canvas
+  let offsetX = 0;
+  for (let i = 0; i < gambarElements.length; i++) {
+    const gambar = gambarElements[i];
+    const image = new Image();
+    image.src = gambar.src;
+    image.onload = function () {
+      ctx.drawImage(image, offsetX, 0, image.width, image.height);
+      offsetX += image.width;
+      if (i === gambarElements.length - 1) {
+        // All images drawn, convert canvas to JPEG and download
+        const jpegURL = canvas.toDataURL("image/jpeg");
+        const link = document.createElement("a");
+        link.href = jpegURL;
+        link.download = "hasil_akhir.jpeg";
+        link.click();
+      }
+    };
+  }
+}
