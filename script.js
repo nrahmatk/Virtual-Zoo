@@ -19,13 +19,13 @@ function renderGallery() {
   gallery.innerHTML = "";
   animals.forEach((animal, index) => {
     const isLiked = likedAnimals.includes(index);
-    const likeButton = `<button class="btn btn-primary like-btn" data-index="${index}" ${isLiked ? "disabled" : ""}>Like</button>`;
+    const likeButton = `<button class="btn btn-success like-btn container-fluid" data-index="${index}" ${isLiked ? "disabled" : ""}><i class="bi bi-heart-fill""></i> Like</button>`;
     const card = `
       <div class="col-md-4 mb-3">
-        <div class="card">
+        <div class="card shadow p-3 mb-5 border border-success border-3 rounded">
           <img src="${animal.image}" class="card-img-top" style="max-height: 300px;" alt="${animal.name}">
           <div class="card-body">
-            <h5 class="card-title">${animal.name}</h5>
+            <h5 class="card-title text-center">${animal.name}</h5>
             <!-- <p class="card-text">${animal.description}</p> -->
             ${likeButton}
           </div>
@@ -63,12 +63,12 @@ function renderFavorites() {
     const animal = animals[index];
     const listItem = `
   <div class="col-md-2 mb-4">
-     <div class="card">
+     <div class="card p-2">
         <img src="${animal.image}" class="card-img-top" alt="${animal.name}">
           <div class="card-body">
-            <h5 class="card-title">${animal.name}</h5>
+            <h5 class="card-title text-center">${animal.name}</h5>
             <!-- <p class="card-text">${animal.description}</p> -->
-            <button class="btn btn-danger remove-btn" data-index="${index}">Remove</button>
+            <button class="btn btn-danger remove-btn container-fluid" data-index="${index}">Remove</button>
           </div>
       </div>
   </div>
