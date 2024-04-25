@@ -77,6 +77,7 @@ function showAnimalModal(index) {
   modalInstance.show();
 }
 
+
 // Function to update like count in navbar
 function updateLikeCount() {
   const likeCount = document.getElementById("like-count");
@@ -102,17 +103,17 @@ function renderFavorites() {
   likedAnimals.forEach(index => {
     const animal = animals[index];
     const listItem = `
-  <div class="col-md-2 mb-4">
-     <div class="card p-2">
-        <img src="${animal.image}" class="card-img-top" alt="${animal.name}">
-          <div class="card-body">
-            <h5 class="card-title text-center">${animal.name}</h5>
-            <!-- <p class="card-text">${animal.description}</p> -->
-            <button class="btn btn-danger remove-btn container-fluid" data-index="${index}">Remove</button>
-          </div>
-      </div>
+    <div class="col-md-2 mb-4">
+    <div class="card p-2">
+    <img src="${animal.image}" class="card-img-top" alt="${animal.name}">
+    <div class="card-body">
+    <h5 class="card-title text-center">${animal.name}</h5>
+    <!-- <p class="card-text">${animal.description}</p> -->
+    <button class="btn btn-danger remove-btn container-fluid" data-index="${index}">Remove</button>
+    </div>
+    </div>
   </div>
-    `;
+  `;
     favoritesList.innerHTML += listItem;
   });
 
@@ -144,6 +145,11 @@ document.addEventListener("click", event => {
   }
 });
 
+// Tambahkan event listener untuk tombol close pada modal favoritesModal
+document.getElementById('favoritesModal').addEventListener('hidden.bs.modal', function () {
+  // Ganti lokasi URL kembali ke tampilan awal
+  window.location.href = 'index.html';
+});
 // Function to handle form submission for adding a new animal
 document.getElementById("addAnimalForm").addEventListener("submit", function(event) {
   event.preventDefault();
