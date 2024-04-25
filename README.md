@@ -13,3 +13,4 @@ next kita ngapain
 silahkan edit + tambah dengan branch masing-masing, thx :)
 css pakai bootstrap. penggunaan bisa dilihat di bootstrap dokumentasi
 pakai css vanila dipersilahkan
+//
