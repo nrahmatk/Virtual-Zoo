@@ -1,14 +1,38 @@
 // Data array of animals
 let animals = [
-  { name: "Kucing", image: "https://static.vecteezy.com/system/resources/previews/013/078/569/non_2x/illustration-of-cute-colored-cat-cartoon-cat-image-in-format-suitable-for-children-s-book-design-elements-introduction-of-cats-to-children-books-or-posters-about-animal-free-png.png", description: "A domestic animal known for its independence." },
-  { name: "Anjing", image: "https://png.pngtree.com/png-vector/20230302/ourmid/pngtree-happy-cartoon-dog-vector-png-image_6625750.png", description: "A loyal companion to humans." },
-  { name: "Gajah", image: "https://i.pinimg.com/originals/2a/b5/c7/2ab5c7e34204f5984cbd288a65e10a38.png", description: "A loyal companion to humans." },
-  { name: "Singa", image: "https://i.pinimg.com/564x/07/89/69/078969a64a576b87aecaf7c284bebb7f.jpg", description: "A loyal companion to humans." },
-  { name: "Buaya", image: "https://pngfre.com/wp-content/uploads/Crocodile-7.png", description: "A loyal companion to humans." },
-  { name: "Ayam", image: "https://png.pngtree.com/png-vector/20230302/ourmid/pngtree-happy-cartoon-hen-vector-png-image_6625859.png", description: "A loyal companion to humans." },
+  { name: "Kucing", image: "https://static.vecteezy.com/system/resources/previews/013/078/569/non_2x/illustration-of-cute-colored-cat-cartoon-cat-image-in-format-suitable-for-children-s-book-design-elements-introduction-of-cats-to-children-books-or-posters-about-animal-free-png.png", description: "" },
+  { name: "Anjing", image: "https://png.pngtree.com/png-vector/20230302/ourmid/pngtree-happy-cartoon-dog-vector-png-image_6625750.png", description: "" },
+  { name: "Gajah", image: "https://i.pinimg.com/originals/2a/b5/c7/2ab5c7e34204f5984cbd288a65e10a38.png", description: "" },
+  { name: "Singa", image: "https://i.pinimg.com/564x/07/89/69/078969a64a576b87aecaf7c284bebb7f.jpg", description: "" },
+  { name: "Buaya", image: "https://pngfre.com/wp-content/uploads/Crocodile-7.png", description: "" },
+  { name: "Ayam", image: "https://png.pngtree.com/png-vector/20230302/ourmid/pngtree-happy-cartoon-hen-vector-png-image_6625859.png", description: "" },
 
   // Add more animals as needed
 ];
+// Fungsi untuk mendapatkan deskripsi hewan berdasarkan nama
+function getAnimalDescription(namaHewan) {
+  if (namaHewan === "Kucing") {
+    return "Kucing, Felis catus, adalah spesies mamalia kecil yang berasal dari keluarga Felidae dan telah menjadi bagian dari kehidupan manusia selama ribuan tahun. Tergolong hewan karnivora. Asal usul kucing dapat ditelusuri kembali ke predator kecil yang hidup di padang pasir dan dataran tinggi Asia, yang secara alami beradaptasi dengan lingkungan yang keras dan mempertahankan kemampuan untuk berburu dengan efisien. Kucing adalah hewan yang sangat penasaran dan suka menjelajahi lingkungan sekitarnya. Mereka sering kali bereksperimen dengan objek dan suka memanjat. "
+  } else if (namaHewan === "Anjing") {
+    return "Anjing adalah salah satu hewan peliharaan yang paling populer di dunia. Mereka adalah mamalia domestik yang setia dan loyal kepada manusia sejak ribuan tahun yang lalu. Anjing telah menjadi bagian integral dari kehidupan manusia, berperan sebagai teman, penjaga rumah, hewan penolong, dan bahkan mitra pekerja dalam berbagai bidang seperti penjagaan, pencarian dan penyelamatan, dan terapi. Dengan beragam ras, ukuran, dan karakteristiknya, anjing menunjukkan kecerdasan yang luar biasa serta kemampuan untuk memahami dan merespons perintah manusia. Selain itu, anjing juga memiliki hubungan sosial yang kompleks, baik dengan sesama anjing maupun dengan manusia. Menjaga dan merawat anjing dengan baik bukan hanya memenuhi kebutuhan fisiknya, tetapi juga mengembangkan ikatan emosional yang kuat antara manusia dan hewan."
+  } else if (namaHewan === "Gajah") {
+    return "Gajah adalah mamalia besar yang terkenal dengan belalainya yang panjang. Mereka hidup di lingkungan sosial kompleks dan memiliki kecerdasan yang luar biasa.Gajah adalah hewan sosial yang hidup dalam kelompok besar yang disebut kawanan. Mereka berkomunikasi menggunakan berbagai suara, gerakan tubuh, dan bahkan getaran tanah yang tidak terdengar oleh manusia. Gajah adalah herbivora yang menghabiskan sebagian besar hari mereka mencari makanan. Diet mereka terdiri dari berbagai tumbuhan, seperti rumput, daun, buah, dan kulit pohon. Gajah sangat ketergantungan dengan air , mereka sering membawa air ke mulut mereka dengan menggunakan belalai mereka atau meminum langsung dari sungai atau kolam."
+  } else if (namaHewan === "Singa") {
+    return "Singa adalah predator besar yang kuat dan gagah. Mereka merupakan bagian penting dari ekosistem savana dan hutan di Afrika. Singa betina biasanya melahirkan anak setelah periode kehamilan sekitar 3,5 bulan. Anak singa, disebut anak singa, dilindungi oleh induk betina dalam beberapa minggu pertama kehidupan mereka. Singa jantan memiliki peran penting dalam melindungi kawanan dan wilayah mereka dari ancaman dari luar, termasuk singa jantan lainnya."
+  } else if (namaHewan === "Buaya") {
+    return "Buaya adalah reptil karnivora yang hidup di perairan tawar dan payau. Mereka memiliki tubuh yang dilengkapi dengan perisai kulit yang kokoh dan sangat terampil dalam berburu.  Buaya adalah pemangsa karnivora yang kuat dan efisien. Mereka memburu berbagai jenis mangsa, mulai dari ikan dan amfibi hingga mamalia besar seperti rusa dan kerbau. Buaya sering menggunakan teknik penyergapan, bersembunyi di bawah air dan menunggu mangsa mereka untuk mendekat sebelum menyerang dengan cepat."
+  } else if (namaHewan === "Ayam") {
+    return "Ayam adalah unggas domestik yang sering dijadikan sebagai sumber protein hewani. Mereka memiliki berbagai macam warna dan jenis, dan sering dipelihara untuk telur dan dagingnya. Ayam adalah sumber makanan yang penting bagi manusia, dengan daging dan telurnya menjadi bagian penting dari diet di banyak budaya di seluruh dunia. Selain sebagai sumber makanan, ayam juga digunakan untuk keperluan lain seperti hiasan, pertunjukan, dan bahkan sebagai peliharaan."
+  } else {
+    return "Deskripsi hewan ini belum tersedia."
+  }
+}
+
+// Looping array animals dan menambahkan deskripsi
+for (let i = 0; i < animals.length; i++) {
+  animals[i].description = getAnimalDescription(animals[i].name)
+}
+
 
 // Load animals from local storage
 let likedAnimals = JSON.parse(localStorage.getItem("likedAnimals")) || [];
