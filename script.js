@@ -26,7 +26,7 @@ function renderGallery() {
           <img src="${animal.image}" class="card-img-top" style="max-height: 300px;" alt="${animal.name}">
           <div class="card-body">
             <h5 class="card-title text-center">${animal.name}</h5>
-            <!-- <p class="card-text">${animal.description}</p> -->
+            <p class="card-text">${animal.description}
             ${likeButton}
           </div>
         </div>
@@ -65,8 +65,8 @@ function renderFavorites() {
   <div class="col-md-2 mb-4">
      <div class="card p-2">
         <img src="${animal.image}" class="card-img-top" alt="${animal.name}">
-          <div class="card-body">
-            <h5 class="card-title text-center">${animal.name}</h5>
+          <div class="card-bo
+          +itle text-center">${animal.name}</h5>
             <!-- <p class="card-text">${animal.description}</p> -->
             <button class="btn btn-danger remove-btn container-fluid" data-index="${index}">Remove</button>
           </div>
@@ -77,6 +77,34 @@ function renderFavorites() {
   });
 
 }
+
+function AddPictureInFinal (){
+  let HasilAkhir = document.getElementById(`GambarFinal`)
+  let temp = ``
+  // temp += `<image src="checkouttes_fhddddd.png" style="max-width: 100%; max-height: 100%; class:image-container">`
+  //  BELUM ADA USER NAME
+  // temp += `<h1 class=ZooName><strong>${UserName}'ZOO</strong></h1>`
+  for (let i = 0; i < likedAnimals.length; i++) {
+    let indexAnimals = likedAnimals[i]
+    if (i === 0) {
+    temp += `<image src ="${animals[indexAnimals].image}" class="position-absolute top-0 start-0 kompilasi">`
+  } 
+  if (i === 1) {
+    temp += `<image src ="${animals[indexAnimals].image}" class="position-absolute top-0 end-0 kompilasi">`
+  }
+  if (i === 2) {
+    temp += `<image src ="${animals[indexAnimals].image}" class="bottomLeftImage kompilasi">`
+  }
+  if (i === 3) {
+    temp += `<image src ="${animals[indexAnimals].image}" class="bottomRightImage kompilasi">`
+  }
+  if (i === 4) {
+    temp += `<image src ="${animals[indexAnimals].image}" class="Middlemage kompilasi">`
+  }
+  }
+  HasilAkhir.innerHTML = temp
+}
+
 
 // Function to handle remove button click
 function handleRemoveButtonClick(event) {
@@ -152,3 +180,4 @@ function init() {
 
 
 init(); // Call init() to start the application
+

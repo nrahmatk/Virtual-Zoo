@@ -7,7 +7,7 @@ fitur yang udah bisa
 next kita ngapain
 - bikin cover (halaman depan) + input nama user kalau bisa (ntar bisa render di map akhir <--- biar berasa esklusip)
 - siapin buat render halaman akhirnya (map kebun binatang)
-- benerin template, ukuran card dll
+- bikin data hewan (hewan, link png, deskripsi)
 
 
 silahkan edit + tambah dengan branch masing-masing, thx :)
