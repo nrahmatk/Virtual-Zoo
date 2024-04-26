@@ -26,7 +26,7 @@ body {
     height: 100%;
     background-image: url('jpg/25.png');
     background-size: cover;
-    filter: blur(10px); /* Menyesuaikan nilai untuk efek blur yang diinginkan */
+    filter: blur(30px); /* Menyesuaikan nilai untuk efek blur yang diinginkan */
     opacity: 0.8; /* Menyesuaikan nilai untuk efek memudar yang diinginkan */
     z-index: -1; /* Pastikan lapisan ini berada di belakang konten lainnya */
 }
@@ -49,7 +49,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(10%, -50%);
-    max-width: 450px;
+    max-width: 600px;
     max-height: 100%;
     background-color: rgba(233, 241, 223, 0.8);
     padding: 25px;
@@ -63,9 +63,10 @@ body {
 
 .logoDepan {
     text-align: center;
+    font-size: 65px;
     color: green;
     font-family: 'Komika', sans-serif;
-
+    margin-bottom: 20px;
 }
 
 form {
