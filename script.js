@@ -1,3 +1,33 @@
+function saveName() {
+  var name = document.getElementById("nama").value;
+  localStorage.setItem("savedName", name);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const inputNama = document.getElementById('nama');
+  const nextButton = document.querySelector('.next-button');
+  
+  var name = document.getElementById("nama").value;
+  localStorage.setItem("savedName", name);
+  
+  nextButton.addEventListener('click', function (event) {
+    event.preventDefault()
+    const namaValue = inputNama.value.trim()
+
+      if (namaValue.length === 0) {
+        alert('Nama tidak boleh kosong!')
+      } else if (namaValue.length <= 6) {
+          saveName()
+          navigateToNextPage()
+      } 
+    })
+    function navigateToNextPage() {
+      window.location.href = 'index.html'
+    }
+  })
+  
+  
+  
 // Data array of animals
 let animals = [
   { name: "Kucing", image: "https://static.vecteezy.com/system/resources/previews/013/078/569/non_2x/illustration-of-cute-colored-cat-cartoon-cat-image-in-format-suitable-for-children-s-book-design-elements-introduction-of-cats-to-children-books-or-posters-about-animal-free-png.png", description: "Kucing, Felis catus, adalah spesies mamalia kecil yang berasal dari keluarga Felidae dan telah menjadi bagian dari kehidupan manusia selama ribuan tahun. Tergolong hewan karnivora. Asal usul kucing dapat ditelusuri kembali ke predator kecil yang hidup di padang pasir dan dataran tinggi Asia, yang secara alami beradaptasi dengan lingkungan yang keras dan mempertahankan kemampuan untuk berburu dengan efisien. Kucing adalah hewan yang sangat penasaran dan suka menjelajahi lingkungan sekitarnya. Mereka sering kali bereksperimen dengan objek dan suka memanjat." },
@@ -5,10 +35,10 @@ let animals = [
   { name: "Zebra", image: "https://i.pinimg.com/originals/5d/b6/2c/5db62c945823a0306feba525530672bb.png", description: "Zebra, Equus zebra, adalah mamalia herbivora yang dikenal karena pola belang hitam dan putih mereka yang mencolok. Mereka merupakan bagian dari keluarga Equidae dan ditemukan di padang rumput Afrika. Zebra sering bermigrasi dalam jumlah besar, mencari sumber makanan yang baru. Mereka juga memiliki sistem sosial yang kompleks dan hidup dalam kawanan besar yang dipimpin oleh pemimpin jantan." },
   { name: "Jerapah", image: "https://png.pngtree.com/png-clipart/20230413/original/pngtree-hand-draw-cute-giraffe-in-cartoon-style-png-image_9053056.png", description: "Jerapah, Giraffa camelopardalis, adalah mamalia herbivora terbesar di dunia dengan leher panjang yang khas. Mereka ditemukan di Afrika Sub-Sahara dan menggunakan leher panjang mereka untuk mencapai daun-daun tinggi di pohon. Jerapah hidup dalam kelompok kecil dan sering berpindah-pindah mencari makanan." },
   { name: "Gajah", image: "https://i.pinimg.com/originals/2a/b5/c7/2ab5c7e34204f5984cbd288a65e10a38.png", description: "Gajah, Elephantidae, adalah mamalia raksasa yang berasal dari Asia dan Afrika. Mereka adalah salah satu hewan darat terbesar di dunia dan memiliki belalai yang panjang dan canggih, yang digunakan untuk mengambil makanan, minum, dan berkomunikasi. Gajah hidup dalam kelompok sosial yang kompleks yang disebut kawanan, dipimpin oleh gajah betina tertua atau matriark. Mereka dikenal karena kecerdasan mereka yang tinggi, memori yang kuat, dan perilaku sosial yang kompleks. Gajah juga merupakan hewan herbivora yang memakan berbagai jenis tumbuhan." },
-  { name: "Singa", image: "https://i.pinimg.com/564x/07/89/69/078969a64a576b87aecaf7c284bebb7f.jpg", description: "Singa, Panthera leo, adalah mamalia karnivora besar yang berasal dari Afrika dan beberapa bagian Asia. Mereka adalah simbol kekuatan dan keanggunan, dan terkenal dengan singgasana mereka dalam kawanan. Singa jantan biasanya bertanggung jawab atas perlindungan wilayah dan pemangsaan, sementara singa betina sering kali berburu bersama dan membesarkan anak-anak mereka. Singa dikenal karena kemampuan berburu mereka yang kuat, kecerdasan sosial, dan kemampuan untuk berkomunikasi melalui suara-suaranya yang khas." },
+  { name: "Singa", image: "https://static.vecteezy.com/system/resources/thumbnails/024/521/379/small_2x/cartoon-lion-transparent-background-png.png", description: "Singa, Panthera leo, adalah mamalia karnivora besar yang berasal dari Afrika dan beberapa bagian Asia. Mereka adalah simbol kekuatan dan keanggunan, dan terkenal dengan singgasana mereka dalam kawanan. Singa jantan biasanya bertanggung jawab atas perlindungan wilayah dan pemangsaan, sementara singa betina sering kali berburu bersama dan membesarkan anak-anak mereka. Singa dikenal karena kemampuan berburu mereka yang kuat, kecerdasan sosial, dan kemampuan untuk berkomunikasi melalui suara-suaranya yang khas." },
   { name: "Buaya", image: "https://pngfre.com/wp-content/uploads/Crocodile-7.png", description: "Buaya adalah reptil besar yang hidup di air, terutama ditemukan di daerah tropis dan subtropis di seluruh dunia. Mereka adalah predator yang efisien dan tangguh, dengan moncong panjang dan gigi yang tajam. Buaya memiliki kemampuan untuk menunggu dengan sabar sebelum menyerang mangsa mereka, menggunakan kekuatan dan kecepatan untuk menangkap buruan. Mereka juga dikenal karena kemampuan mereka untuk beradaptasi dengan lingkungan air yang beragam, dari sungai hingga rawa-rawa." },
   { name: "Ayam", image: "https://png.pngtree.com/png-vector/20230302/ourmid/pngtree-happy-cartoon-hen-vector-png-image_6625859.png", description: "Ayam, Gallus gallus domesticus, adalah unggas yang paling umum dipelihara di seluruh dunia untuk daging dan telur mereka. Mereka adalah hewan yang mudah beradaptasi dan sering berkumpul dalam kelompok. Ayam memiliki berbagai jenis, termasuk ayam ras dan ayam kampung, dengan variasi warna dan bentuk tubuh yang berbeda. Selain menjadi sumber pangan, ayam juga memiliki peran ekologis dalam mengendalikan populasi serangga dan mencampurkan tanah di lingkungan pertanian." },
-  { name: "Panda", image: "https://png.pngtree.com/png-clipart/20201117/ourmid/pngtree-cartoon-panda-clipart-png-image_2436083.jpg", description: "Panda, Ailuropoda melanoleuca, adalah mamalia omnivora yang terkenal dengan warna hitam dan putih mereka. Ada dua spesies panda: panda raksasa dan panda kecil. Panda raksasa terutama memakan bambu, sementara panda kecil memakan buah-buahan dan serangga. Keduanya terancam punah dan menjadi fokus konservasi yang luas." },
+  { name: "Panda", image: "https://png.pngtree.com/png-vector/20220807/ourmid/pngtree-cartoon-panda-sleep-png-image_6102474.png", description: "Panda, Ailuropoda melanoleuca, adalah mamalia omnivora yang terkenal dengan warna hitam dan putih mereka. Ada dua spesies panda: panda raksasa dan panda kecil. Panda raksasa terutama memakan bambu, sementara panda kecil memakan buah-buahan dan serangga. Keduanya terancam punah dan menjadi fokus konservasi yang luas." },
   { name: "Kura-kura", image: "https://png.pngtree.com/png-vector/20230324/ourmid/pngtree-simple-flat-hand-draw-cute-cartoon-turtle-vector-png-image_6667208.png", description: "Kura-kura adalah reptil bersisik dengan cangkang yang keras yang mereka gunakan untuk perlindungan. Mereka ditemukan di berbagai habitat di seluruh dunia. Kura-kura adalah herbivora atau omnivora, tergantung pada spesiesnya, dan dapat hidup selama puluhan tahun." },
   { name: "Tupai", image: "https://png.pngtree.com/png-vector/20231108/ourmid/pngtree-squirrel-cartoon-animal-png-image_10446551.png", description: "Tupai adalah mamalia kecil yang sering ditemukan di hutan-hutan Asia, Eropa, dan Amerika Utara. Mereka memiliki tubuh kecil dengan ekor panjang dan bulu yang lebat. Tupai adalah hewan omnivora dan memakan berbagai jenis makanan, termasuk buah-buahan, biji-bijian, dan serangga." },
   { name: "Baruang", image: "https://pngfre.com/wp-content/uploads/Bear-18.png", description: "Beruang adalah mamalia besar yang ditemukan di berbagai habitat di seluruh dunia. Mereka terdiri dari beberapa spesies, termasuk beruang cokelat, beruang hitam, dan beruang kutub. Beruang adalah omnivora dan memakan berbagai makanan, termasuk tumbuhan dan hewan kecil. Beberapa spesies beruang, seperti beruang kutub, terancam punah karena perubahan iklim dan hilangnya habitat." },
@@ -102,11 +132,13 @@ function renderFavorites() {
 }
 
 function AddPictureInFinal (){
+  let namanya = localStorage.getItem("savedName");
+  console.log(namanya)
   let HasilAkhir = document.getElementById(`GambarFinal`)
   let temp = ``
   // temp += `<image src="checkouttes_fhddddd.png" style="max-width: 100%; max-height: 100%; class:image-container">`
   //  BELUM ADA USER NAME
-  // temp += `<h1 class=ZooName><strong>${UserName}'ZOO</strong></h1>`
+  temp += `<h1 class="namaPapan"><strong>${namanya}'s zoo</strong></h1>`
   for (let i = 0; i < likedAnimals.length; i++) {
     let indexAnimals = likedAnimals[i]
     if (i === 0) {
@@ -203,4 +235,3 @@ function resetData () {
 }
 
 init(); // Call init() to start the application
-

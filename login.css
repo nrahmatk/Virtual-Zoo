@@ -1,0 +1,101 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin-top: 200px;
+    margin-left: 270px;
+    padding: 50px;
+    display: 0;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 80vh; 
+    background-size: cover;
+    background-position: center;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('jpg/25.png');
+    background-size: cover;
+    filter: blur(10px); /* Menyesuaikan nilai untuk efek blur yang diinginkan */
+    opacity: 0.8; /* Menyesuaikan nilai untuk efek memudar yang diinginkan */
+    z-index: -1; /* Pastikan lapisan ini berada di belakang konten lainnya */
+}
+
+.gambar {
+    position: relative;
+    height: 100%;
+}
+.ahay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -50%);
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(10%, -50%);
+    max-width: 450px;
+    max-height: 100%;
+    background-color: rgba(233, 241, 223, 0.8);
+    padding: 25px;
+    border-radius: 10px;
+   
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.logoDepan {
+    text-align: center;
+    color: green;
+    font-family: 'Komika', sans-serif;
+
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 60%; /* Mengisi lebar input sesuai lebar kontainer */
+    box-sizing: border-box; /* Mencegah padding dan border menambah lebar input */
+    font-size: 16px;
+}
+
+.next-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(17, 163, 17);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.next-button:hover {
+    background-color: rgb(14, 131, 14);
+}
+
+
+

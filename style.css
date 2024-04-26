@@ -1,10 +1,22 @@
 @import url('https://fonts.cdnfonts.com/css/komika-2');
 
-.navbar-brand {
+.navbar-brand, .logo{
     font-family: 'Komika', sans-serif;
     font-size: 35px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan teks */
 }
+
+.namaPapan {
+    font-family: 'Komika', sans-serif;
+    color: #fff;
+    font-size: 98px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Bayangan teks */
+    position: absolute;
+    bottom: -677px;
+    right: 405px
+}
+
+
 
 .background-overlay {
     position: fixed;
@@ -78,17 +90,4 @@
     position: absolute;
     bottom: -503px;
     right: 400px
-}
-
-.NamaPapan {
-    height: 200px;
-    width: 200px;
-    background-color: white;
-    position: absolute;
-    bottom: -0; 
-    right: 0;
-    /* color: white;
-    text-align: center;
-    font-size: 50px;
-    font-family: "Archivo Black"; */
 }
