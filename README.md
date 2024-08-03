@@ -13,7 +13,11 @@ This web application allows you to explore and learn about various animals in a 
 
 To get started with the Virtual Zoo, clone this repository and open it in your preferred code editor. You can view the application locally by opening `index.html` in your web browser.
 
-## Link Deploy
+## Collaborator
+[Rahmat](https://github.com/nrahmatk/)
+[Detto](https://github.com/adettor212)
+[Nasrul](https://github.com/Nasrullah2688)
+[Rafael](https://github.com/RizyaRafael)
 
 
 ## Screenshoot
