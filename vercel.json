@@ -1,0 +1,19 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/root/index.html"
+    },
+    {
+      "source": "/home",
+      "destination": "/home/home.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "https://home.mov.my.id",
+      "permanent": true
+    }
+  ]
+}
